@@ -1,0 +1,186 @@
+/**index.wxss**/
+page{
+  background-color: #aaaaaa;
+}
+.container{
+  width: 750rpx;
+}
+/* 地址栏 */
+.address{
+  display: flex;
+  width: 720rpx;
+  height: 100rpx;
+  margin:20rpx auto;
+  background-color:#fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(48, 107, 107);
+}
+/* 地址图标 */
+.ad{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+/* now天气 */
+.nowweather{
+  display: flex;
+  width: 720rpx;
+  height: 450rpx;
+  margin:0 auto;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+/* 描述天气状况图片 */
+.nowweather .img_desc{
+  width: 140rpx;
+  height: 140rpx;
+}
+/* 状况描述 */
+.nowweather .desc{
+  font-size: 50rpx;
+}
+/* 温度 */
+.nowweather .tmp{
+  color:skyblue;
+}
+/* 风向 */
+.nowweather .wind{
+  /* margin-top: 30rpx; */
+  color: orange;
+}
+/* 未来几个小时天气区域 */
+.hourly{
+  width: 720rpx;
+  /* height: 150rpx; */
+  /* margin:15rpx auto; */
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding:20rpx 0;
+  margin-right: 15rpx;
+  margin-left: 15rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+.hourly .schourly{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.hourly .schourly .scroll-flex{
+  display: flex;
+  height: 100%;
+  padding-left:50rpx;
+  flex-direction: row; 
+  align-items: center;
+}
+.hourly .schourly .scview{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding:0 90rpx 0 0;
+}
+.scview .day,.hour{
+  white-space: nowrap;
+  font-size: 24rpx;
+}
+.scview .cond_txt{
+  font-size: 28rpx;
+  color:cadetblue;
+}
+.scview .cond_img{
+  width: 70rpx;
+  height: 70rpx;
+}
+.scview .wind{
+  white-space:nowrap;
+  color:skyblue;
+  font-size: 26rpx;
+}
+/* 未来几天天气 */
+.dayly{
+  box-sizing: content-box;
+  width: 680rpx;
+  margin:0 auto;
+  font-size: 24rpx;
+  padding:0 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  border-radius: 10rpx;
+}
+.dayly .dayItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px solid #ccc;
+}
+.dayly .date,.tmp,.wind{
+  flex:1;
+}
+.tmp{
+  text-align: center;
+}
+.dayly .dayItem .desc{
+  /* border-right: 1px solid red;
+  border-left: 1px solid red; */
+  display: flex;
+  /* flex:1; */
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40rpx;
+}
+.dayly .dayItem .desc .txt{
+  width: 80rpx;
+  text-align: center;
+}
+.dayly .dayItem .desc image{
+  width: 60rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+/* 生活指数 */
+
+.lifestyle{
+  display: flex;
+  box-sizing: content-box;
+  width: 720rpx;
+  font-size: 28rpx;
+  margin:20rpx auto;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.lifestyle .title{
+  width: 700rpx;
+  padding-left: 20rpx;
+  line-height: 70rpx;
+  border-bottom:1px solid #ccc;
+}
+.lifestyle .life-item{
+  display: flex;
+  width:356rpx;
+  line-height: 80rpx;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  border-bottom:1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.lifestyle .life-item:nth-child(2n+1){
+  border-right: none;
+}
+.lifestyle .life-item image{
+  flex:1;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.lifestyle .life-item .desc{
+  flex:1;
+  text-align: center;
+}

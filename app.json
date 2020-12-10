@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test"
+  ],
+  "permission": {
+    "scope.userLocation": {"desc": "小程序想要获取你的地理位置"}
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蜗牛天气",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="address">
+    <image src="/pages/index/images/address.svg" class="ad"></image>
+    {{address}}
+  </view>
+  <view class="nowweather">
+    <image class="img_desc" src="{{nowWeatherData.condImg}}"></image>
+    <!-- 天气状况 -->
+    <view class="desc">{{nowWeatherData.cond_txt}}</view>
+    <!-- 温度 -->
+    <view class="tmp">{{nowWeatherData.tmp+'℃'}}</view>
+    <view class="wind">
+      {{'风向:'+nowWeatherData.wind_dir}}
+    </view>
+  </view>
+  <!-- 未来几个小时天气状况 -->
+  <view class="hourly">
+    <scroll-view class="schourly" scroll-x="{{true}}">
+      <view class="scroll-flex">
+      <block wx:for="{{hourlyData}}" wx:key="index">
+      <view class="scview">
+        <view class="day">{{item.day}}</view>
+        <view class="hour">{{item.hour}}</view>
+        <image class="cond_img" src="{{item.cond_Img}}"></image>
+        <view class="cond_txt">{{item.cond_txt}}</view>
+        <view class="wind">{{'风向:'+item.wind_dir}}</view>
+      </view>
+      </block>
+    </view>
+    </scroll-view>
+  </view>
+  <!-- 未来几天天气状况 -->
+  <view class="dayly">
+    <block wx:for="{{daysData}}" wx:key="index">
+      <view class="dayItem">
+        <view class="date">{{item.date}}</view>
+        <view class="desc">
+          <image src="{{item.img}}">
+          </image>
+          <view class="txt">{{item.cond_txt_d}}</view>
+        </view>
+        <view class="wind">{{item.wind_dir}}{{item.wind_sc+'级'}}</view>
+        <view class="tmp">{{item.tmin+'°'}}{{'/'+item.tmax+'°'}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 生活指数 -->
+  <!-- title -->
+  <view class="lifestyle">
+    <view class="title">生活指数</view>
+    <block wx:for="{{lifeStyle}}" wx:key="index">
+      <view class="life-item">
+        <image src="{{lifeImage[item.type]}}"></image>
+        <view class="desc">{{item.brf}}</view>
+      </view>
+    </block>
+  </view>
+</view>
